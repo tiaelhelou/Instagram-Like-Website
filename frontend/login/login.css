@@ -179,3 +179,18 @@ div {
     color:#77797c;
     line-height: 1.5;
 }
+
+/* Links */
+
+a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
