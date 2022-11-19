@@ -143,3 +143,37 @@ form {
 .input:focus + .spam_input::before {
     width: 100%;
 }
+
+/* button */
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.div_btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 21px;
+    margin-top: 32px;
+    margin-bottom: 22px;
+    background: #d41872;
+    background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+    position: relative;
+    z-index: 1;
+}
