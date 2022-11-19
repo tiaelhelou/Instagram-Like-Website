@@ -79,3 +79,35 @@ body {
     pointer-events: none;
 }
 
+/* button */
+
+.div_btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    outline: none !important;
+    border: none;
+    background: transparent;
+
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 21px;
+    margin-top: 32px;
+
+    background: #d41872;
+    background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+    position: relative;
+    z-index: 1;
+}
