@@ -111,3 +111,30 @@ body {
     position: relative;
     z-index: 1;
 }
+
+/* Login */
+
+.div_login {
+    width: 390px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background: transparent;
+}
+
+form {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 41px;
+    display: block;
+}
