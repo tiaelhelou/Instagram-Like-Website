@@ -155,3 +155,11 @@ div {
 .forget {
     text-align: right;
 }
+
+/* Text */
+
+.txt {
+    font-size: 13px;
+    color:#77797c;
+    line-height: 1.5;
+}
