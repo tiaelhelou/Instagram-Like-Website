@@ -1,0 +1,15 @@
+/* Body */
+
+body {
+    background-image: url('../images/social_media.png');
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+div {
+    width: 100%;
+    margin: 0 auto;
+}
