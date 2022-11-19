@@ -104,6 +104,16 @@ body {
     left: 35px;
 }
 
+.input:focus + .spam_input::after {
+    
+    left: 23px;
+    color: #d41872;
+}
+
+.input:focus + .spam_input::before {
+    width: 100%;
+}
+
 /* button */
 
 button {
