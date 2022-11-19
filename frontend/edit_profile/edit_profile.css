@@ -172,6 +172,7 @@ button {
     border-radius: 21px;
     margin-top: 32px;
     margin-bottom: 22px;
+    margin-right: 10px;
     background: #d41872;
     background: linear-gradient(left, #a445b2, #d41872, #fa4299);
     position: relative;
