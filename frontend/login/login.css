@@ -138,3 +138,20 @@ form {
     padding-bottom: 41px;
     display: block;
 }
+
+/* Divs */
+
+div {
+    width: 100%;
+    margin: 0 auto;
+}
+.sign {
+	display: flex;
+    padding-top: 20px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.forget {
+    text-align: right;
+}
