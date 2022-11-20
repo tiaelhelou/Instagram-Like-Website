@@ -2,6 +2,8 @@
 
 include("connect.php");
 
+$response = [];
+
 if(isset($_POST['username']) && isset($_POST["password"]))
 {
     $username = $_POST['username'];
@@ -11,22 +13,19 @@ if(isset($_POST['username']) && isset($_POST["password"]))
     $query -> bind_param ("ss", $username, $password); 
     $query -> execute();
 
-    $response = [];
-
     $result = $query -> get_result();
     $id = $result->fetch_assoc();
-    $response[] = $id;
     
     if(mysqli_num_rows($result) > 0)
     {
-        $_SESSION['username'] = $username;
+        $_SESSION['id'] = $id;
 
+        $response[] = $id;
         echo json_encode($response);
     }
     else
     {
         $response["success"] = false;
-
         echo json_encode($response);
 
     }
@@ -34,7 +33,6 @@ if(isset($_POST['username']) && isset($_POST["password"]))
 else
 {
     $response["success"] = false;
-
     echo json_encode($response);
 
 }
