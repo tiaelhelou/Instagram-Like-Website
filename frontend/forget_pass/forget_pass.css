@@ -34,7 +34,7 @@ div {
     display: block;
 }
 
-form {
+.form {
     width: 100%;
     border-radius: 10px;
     background-color: #fff;
