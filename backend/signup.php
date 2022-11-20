@@ -21,6 +21,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username'])
 
     $response["success"] = true;
     echo json_encode($response);
+    header("Location:../Instagram-Like-Website/frontend/login/login.html");
 
 } else {
 

@@ -5,6 +5,7 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 
 include("connect.php");
+session_start();
 
 $response = [];
 
@@ -26,6 +27,7 @@ if(isset($_POST['username']) && isset($_POST["password"]))
 
         $response[] = $id;
         echo json_encode($response);
+        header("Location:../Instagram-Like-Website/frontend/homepage/home.html");
     }
     else
     {

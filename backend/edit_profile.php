@@ -6,11 +6,13 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
 include('connect.php');
 
+session_start();
+
 $response = [];
 
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
 
-    $id = $_POST['id'];
+    $id = $_SESSION['id'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $username = $_POST['username'];
@@ -24,6 +26,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username'])
 
     $response["success"] = true;
     echo json_encode($response);
+    header("Location:../Instagram-Like-Website/frontend/homepage/home.html");
 
 } else {
 
