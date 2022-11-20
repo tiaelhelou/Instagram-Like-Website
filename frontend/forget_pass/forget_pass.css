@@ -111,6 +111,7 @@ form {
 }
 
 
+
 /* button */
 
 button {
@@ -124,6 +125,18 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    background-color: #555555;
+    opacity: 0;
 }
 
 .btn {
@@ -144,3 +157,6 @@ button {
     z-index: 1;
 }
 
+.btn:hover:before {
+    opacity: 1;
+}
