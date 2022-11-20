@@ -2,19 +2,27 @@
 
 include('connect.php');
 
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-$query = $mysqli->prepare("INSERT INTO users(name, email, username, password) VALUES (?, ?, ?)");
-$query->bind_param("ssss", $name, $email, $username, $password);
-$query->execute();
-
 $response = [];
-$response["success"] = true;
-echo json_encode($response);
 
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = $mysqli->prepare("INSERT INTO users(name, email, username, password) VALUES (?, ?, ?, ?)");
+    $query->bind_param("ssss", $name, $email, $username, $password);
+    $query->execute();
+
+    $response["success"] = true;
+    echo json_encode($response);
+
+} else {
+
+    $response["success"] = false;
+    echo json_encode($response);
+
+}
 
 ?>
