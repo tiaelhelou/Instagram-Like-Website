@@ -35,7 +35,6 @@ pages.load_login = async () => {
 
     btn.addEventListener("click", async function () {
         const input = document.getElementsByClassName("input");
-        const btn = document.getElementsByClassName("btn");
 
         const url = base_url + "login.php";
 
@@ -52,7 +51,6 @@ pages.load_signup = async () => {
 
     btn.addEventListener("click", async function () {
         const input = document.getElementsByClassName("input");
-        const btn = document.getElementsByClassName("btn");
 
         const url = base_url + "signup.php";
 
@@ -61,6 +59,22 @@ pages.load_signup = async () => {
             email: input[1].value,
             username: input[2].value,
             password: input[3].value 
+        }
+    
+        pages.postAPI(url, post_data);
+    });
+}
+
+pages.load_forget_pass = async () => {
+
+    btn.addEventListener("click", async function () {
+        const input = document.getElementsByClassName("input");
+
+        const url = base_url + "forget_pass.php";
+
+        const post_data = {
+            username: input[0].value,
+            password: input[0].value 
         }
     
         pages.postAPI(url, post_data);
