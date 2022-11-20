@@ -47,3 +47,22 @@ pages.load_login = async () => {
         pages.postAPI(url, post_data);
     });
 }
+
+pages.load_signup = async () => {
+
+    btn.addEventListener("click", async function () {
+        const input = document.getElementsByClassName("input");
+        const btn = document.getElementsByClassName("btn");
+
+        const url = base_url + "signup.php";
+
+        const post_data = {
+            name: input[0].value,
+            email: input[1].value,
+            username: input[2].value,
+            password: input[3].value 
+        }
+    
+        pages.postAPI(url, post_data);
+    });
+}
