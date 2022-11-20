@@ -31,5 +31,12 @@ if(isset($_POST['username']) && isset($_POST["password"]))
 
     }
 }
+else
+{
+    $response["success"] = false;
+
+    echo json_encode($response);
+
+}
 
 ?>
