@@ -80,3 +80,22 @@ pages.load_forget_pass = async () => {
         pages.postAPI(url, post_data);
     });
 }
+
+pages.load_edit_profile = async () => {
+
+    btn.addEventListener("click", async function () {
+        const input = document.getElementsByClassName("input");
+
+        const url = base_url + "edit_profile.php";
+
+        const post_data = {
+            name: input[0].value,
+            email: input[1].value,
+            username: input[2].value,
+            password: input[3].value,
+            bio: input[4].value
+        }
+    
+        pages.postAPI(url, post_data);
+    });
+}
