@@ -1,0 +1,9 @@
+/* Body */
+
+body {
+    background-image: url('../images/social_media.png');
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center;
+    background-attachment: fixed;
+}
