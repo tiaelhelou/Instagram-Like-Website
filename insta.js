@@ -11,7 +11,7 @@ pages.getAPI = async (api_url) => {
     try {
         return await axios(api_url);
     } catch (error) {
-        workshop_pages.Console("Error from Linking (GET)", error);
+        pages.Console("Error from Linking (GET)", error);
     }
 }
 
@@ -27,6 +27,6 @@ pages.postAPI = async (api_url, api_data, api_token = null) => {
             }
         );
     } catch (error) {
-        workshop_pages.Console("Error from Linking (POST)", error);
+        pages.Console("Error from Linking (POST)", error);
     }
 }
