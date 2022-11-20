@@ -30,3 +30,20 @@ pages.postAPI = async (api_url, api_data, api_token = null) => {
         pages.Console("Error from Linking (POST)", error);
     }
 }
+
+pages.load_login = async () => {
+
+    btn.addEventListener("click", async function () {
+        const input = document.getElementsByClassName("input");
+        const btn = document.getElementsByClassName("btn");
+
+        const url = base_url + "login.php";
+
+        const post_data = {
+            username: input[0].value,
+            password: input[1].value 
+        }
+    
+        pages.postAPI(url, post_data);
+    });
+}
